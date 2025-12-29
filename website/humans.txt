@@ -1,0 +1,12 @@
+/* TEAM */
+Developers: تیم گیمرها و توسعه‌دهندگان ایرانی
+Contact: https://t.me/ZeusDNS_Support
+
+/* SITE */
+Launched: 2025
+Language: فارسی
+Standards: HTML5, CSS3, Schema.org
+Software: Hand-crafted with love
+
+/* THANKS */
+Thanks to: Cloudflare, FontAwesome, Vazir Font

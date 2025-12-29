@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="bingbot" content="noindex, nofollow">
+  <meta name="slurp" content="noindex, nofollow">
+  <meta name="yandex" content="noindex, nofollow">
+  <meta name="baiduspider" content="noindex, nofollow">
+  <meta name="robots" content="none">
+  <title>ورود به پنل مدیریت | زئوس</title>
+  <link rel="icon" href="/assets/logos/icon.png" sizes="32x32">
+  <link rel="stylesheet" href="/assets/fonts/vazir.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+<style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+    
+    body {
+      font-family: 'vazir', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      line-height: 1.5;
+    }
+    
+    .login-container {
+      background: white;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .login-header {
+      background: linear-gradient(135deg, #4361ee, #3a56d4);
+      color: white;
+      text-align: center;
+      padding: 35px 25px;
+    }
+    
+    .logo {
+      font-size: 52px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    }
+    
+    .login-header h1 {
+      font-size: 24px;
+      margin: 8px 0;
+      font-weight: 700;
+    }
+    
+    .login-body {
+      padding: 35px 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 18px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      font-size: 15px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      font-family: 'vazir';
+      background: #fbfbff;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: #4361ee;
+      box-shadow: 0 0 0 4px rgba(67,97,238,0.15);
+      background: white;
+    }
+    
+    .btn-login {
+      width: 100%;
+      padding: 15px;
+      background: #4361ee;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+      font-family: 'Vazir';
+      box-shadow: 0 8px 20px rgba(67,97,238,0.3);
+    }
+    
+    .btn-login:hover {
+      background: #3a56d4;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(67,97,238,0.4);
+    }
+    
+    .btn-login:active {
+      transform: translateY(0);
+    }
+    
+    .error {
+      background: #ffebee;
+      color: #c62828;
+      padding: 12px 15px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 18px;
+      border: 1px solid #ffcdd2;
+      font-size: 14px;
+      font-weight: 600;
+      animation: slideDown 0.4s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    footer {
+      text-align: center;
+      padding: 18px;
+      color: #666;
+      font-size: 13px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    @media (max-width: 1024px) {
+      .login-container {
+        max-width: 380px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 40px;
+      }
+      
+      .login-container {
+        max-width: 90%;
+        border-radius: 16px;
+      }
+      
+      .login-header {
+        padding: 30px 20px;
+      }
+      
+      .logo {
+        font-size: 48px;
+      }
+      
+      .login-header h1 {
+        font-size: 22px;
+      }
+      
+      .login-body {
+        padding: 30px 25px;
+      }
+      
+      .form-group {
+        margin-bottom: 16px;
+      }
+      
+      label {
+        font-size: 14px;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        padding: 13px 15px;
+        font-size: 14px;
+        border-radius: 10px;
+      }
+      
+      .btn-login {
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 10px;
+      }
+      
+      footer {
+        padding: 15px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 8px;
+        padding-top: 30px;
+      }
+      
+      .login-header {
+        padding: 25px 18px;
+      }
+      
+      .logo {
+        font-size: 44px;
+      }
+      
+      .login-header h1 {
+        font-size: 20px;
+      }
+      
+      .login-body {
+        padding: 25px 20px;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        padding: 12px 14px;
+      }
+      
+      .btn-login {
+        padding: 13px;
+      }
+      
+      .error {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-height: 600px) and (orientation: landscape) {
+      body {
+        padding: 10px;
+        align-items: flex-start;
+      }
+      
+      .login-container {
+        max-width: 90%;
+        margin: 20px auto;
+      }
+      
+      .login-header {
+        padding: 20px 15px;
+      }
+      
+      .logo {
+        font-size: 40px;
+        margin-bottom: 5px;
+      }
+      
+      .login-header h1 {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+      
+      .login-body {
+        padding: 20px 15px;
+      }
+      
+      .form-group {
+        margin-bottom: 12px;
+      }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    
+    .btn-login:focus {
+      animation: pulse 0.3s ease;
+    }
+
+    .btn-login:focus-visible {
+      outline: 3px solid #4361ee;
+      outline-offset: 2px;
+    }
+</style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <div class="logo">Zeus</div>
+      <h1>پنل مدیریت بلاگ زئوس</h1>
+    </div>
+
+    <div class="login-body">
+      <% if (error) { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+
+      <form action="<%= basePath %>/login" method="post">
+        <div class="form-group">
+          <label for="username">نام کاربری</label>
+          <input type="text" name="username" id="username" required autofocus placeholder="admin">
+        </div>
+
+        <div class="form-group">
+          <label for="password">رمز عبور</label>
+          <input type="password" name="password" id="password" required placeholder="••••••••">
+        </div>
+
+        <button type="submit" class="btn-login">
+          ورود به پنل
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      زئوس بلاگ — ساخته شده با عشق و قدرت
+    </footer>
+  </div>
+</body>
+</html>

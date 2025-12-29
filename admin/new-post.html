@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, notranslate, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="bingbot" content="noindex, nofollow">
+  <meta name="slurp" content="noindex, nofollow">
+  <meta name="yandex" content="noindex, nofollow">
+  <meta name="baiduspider" content="noindex, nofollow">
+  <meta name="robots" content="none">
+  <title>نوشتن پست جدید | زئوس بلاگ</title>
+  <link rel="icon" href="/assets/logos/icon.png" sizes="32x32">
+  <link rel="stylesheet" href="/assets/fonts/vazir.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+
+<style>
+    :root {
+      --primary: #4361ee;
+      --primary-dark: #3a56d4;
+      --danger: #e74c3c;
+      --success: #28a745;
+      --gray: #f8f9fa;
+      --light: #f8f9ff;
+      --dark: #212529;
+    }
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+    }
+    
+    body {
+      font-family: 'vazir', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 15px;
+      color: var(--dark);
+      line-height: 1.5;
+    }
+    
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      text-align: center;
+      padding: 35px 25px;
+    }
+    
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    
+    header p {
+      opacity: 0.95;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    
+    .form-body {
+      padding: 40px;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--dark);
+      font-size: 16px;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      background: #fbfbff;
+      font-family: 'vazir';
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(67,97,238,0.15);
+    }
+    
+    textarea {
+      min-height: 200px;
+      resize: vertical;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+    
+    .id-field input {
+      direction: ltr;
+      text-align: left;
+      font-family: 'Courier New', monospace;
+      background: #fff8f8;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    
+    small {
+      color: #666;
+      font-size: 13px;
+      margin-top: 5px;
+      display: block;
+    }
+    
+    .upload-box {
+      border: 3px dashed var(--primary);
+      border-radius: 15px;
+      padding: 40px 20px;
+      text-align: center;
+      background: var(--light);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .upload-box:hover {
+      background: #eef1ff;
+      border-color: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .upload-box i {
+      font-size: 50px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+    
+    .upload-box p {
+      color: #555;
+      margin: 15px 0 0;
+      font-size: 15px;
+    }
+    
+    .upload-box input[type="file"] {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      background: white;
+      border: 1px solid #e9ecef;
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 25px;
+      box-shadow: 0 8px 25px rgba(67,97,238,0.3);
+      font-family: 'vazir';
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(67,97,238,0.4);
+    }
+    
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      text-decoration: underline;
+      transform: translateY(-1px);
+    }
+
+    .error-message {
+      background: #ffebee;
+      color: #c62828;
+      padding: 12px 15px;
+      border-radius: 10px;
+      border-right: 4px solid #e74c3c;
+      margin: 20px 0;
+      text-align: center;
+      font-weight: bold;
+      animation: slideDown 0.4s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        margin: 15px auto;
+        max-width: 95%;
+      }
+      
+      .form-body {
+        padding: 35px 30px;
+      }
+      
+      header {
+        padding: 30px 25px;
+      }
+      
+      header h1 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        margin: 10px auto;
+        border-radius: 16px;
+      }
+      
+      .form-body {
+        padding: 30px 25px;
+      }
+      
+      header {
+        padding: 25px 20px;
+        border-radius: 16px 16px 0 0;
+      }
+      
+      header h1 {
+        font-size: 24px;
+      }
+      
+      header p {
+        font-size: 15px;
+        margin-top: 8px;
+      }
+      
+      .form-group {
+        margin-bottom: 20px;
+      }
+      
+      label {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+      
+      input[type="text"],
+      input[type="date"],
+      textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+        border-radius: 10px;
+      }
+      
+      textarea {
+        min-height: 180px;
+      }
+      
+      .upload-box {
+        padding: 30px 15px;
+        border-radius: 12px;
+      }
+      
+      .upload-box i {
+        font-size: 45px;
+      }
+      
+      .upload-box p {
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 12px;
+        margin-top: 20px;
+      }
+      
+      .back-link {
+        font-size: 15px;
+        margin-top: 25px;
+      }
+      
+      small {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 5px auto;
+      }
+      
+      .form-body {
+        padding: 25px 20px;
+      }
+      
+      header {
+        padding: 22px 18px;
+      }
+      
+      header h1 {
+        font-size: 22px;
+      }
+      
+      header p {
+        font-size: 14px;
+      }
+      
+      .upload-box {
+        padding: 25px 15px;
+      }
+      
+      .upload-box i {
+        font-size: 40px;
+      }
+      
+      input[type="text"],
+      input[type="date"],
+      textarea {
+        padding: 11px 12px;
+        font-size: 14px;
+      }
+      
+      .btn {
+        padding: 13px;
+        font-size: 15px;
+      }
+      
+      .back-link {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+      body {
+        padding: 10px;
+      }
+      
+      .container {
+        margin: 5px auto;
+        max-height: 95vh;
+        overflow-y: auto;
+      }
+      
+      .form-body {
+        padding: 20px;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      textarea {
+        min-height: 120px;
+      }
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>نوشتن پست جدید</h1>
+      <p>اینجا شاهکار بعدی‌ات رو خلق کن</p>
+    </header>
+
+    <div class="form-body">
+      <form action="/blog-admin/new" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group id-field">
+          <label for="id">آیدی پست (یکتا و ثابت)</label>
+          <input type="text" name="id" id="id" placeholder="zeus-blog-2025" required />
+          <small>فقط حروف کوچک، عدد و خط تیره (-)</small>
+        </div>
+
+        <div class="form-group">
+          <label for="title">عنوان پست</label>
+          <input type="text" name="title" id="title" placeholder="عنوان جذاب و گیرا..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="summary">خلاصه پست (اختیاری)</label>
+          <textarea name="summary" id="summary" placeholder="چند جمله کوتاه برای نمایش در لیست پست‌ها..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="category">دسته‌بندی</label>
+          <input type="text" name="category" id="category" placeholder="مثال: تکنولوژی، زندگی، امنیت" />
+        </div>
+
+        <div class="form-group">
+          <label for="date">تاریخ انتشار</label>
+          <input type="date" name="date" id="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="image">نام کامل تصویر</label>
+          <input type="text" name="image" id="image" placeholder="[id].jpg" style="direction:ltr; text-align:left;" />
+        </div>
+
+        <div class="form-group">
+          <label>آپلود عکس اصلی (با نام آیدی ذخیره می‌شه)</label>
+          <div class="upload-box">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>کلیک کنید یا عکس را اینجا بکشید</p>
+            <input type="file" name="photo" accept="image/*" style="margin-top:15px; width:100%; padding:12px; border-radius:12px;" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tags">تگ‌ها (با کاما جدا کنید)</label>
+          <input type="text" name="tags" id="tags" placeholder="جاوااسکریپت، نود، وب، امنیت" />
+        </div>
+
+        <div class="form-group">
+          <label for="content">محتوای پست</label>
+          <textarea name="content" id="content" rows="22" placeholder="اینجا محتوای کامل پست رو بنویس... (HTML هم قبول است)"></textarea>
+        </div>
+
+        <button type="submit" class="btn">
+          انتشار پست
+        </button>
+      </form>
+
+      <a href="/blog-admin/" class="back-link">
+        بازگشت به لیست پست‌ها
+      </a>
+    </div>
+  </div>
+  <script>
+      function showErrorFromURL() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const error = urlParams.get('error');
+          
+          if (error) {
+              let errorMessage = '';
+              
+              switch(error) {
+                  case 'file_too_large':
+                      errorMessage = 'حجم فایل بسیار بزرگ است! حداکثر حجم مجاز: ۵ مگابایت';
+                      break;
+                  case 'too_many_files':
+                      errorMessage = 'تعداد فایل‌های آپلودی بیش از حد مجاز است';
+                      break;
+                  case 'invalid_format':
+                      errorMessage = 'فرمت فایل مجاز نیست! فقط JPG, PNG, GIF, WebP قابل قبول هستند';
+                      break;
+                  case 'invalid_id':
+                      errorMessage = 'آیدی نامعتبر! فقط حروف کوچک، عدد و خط تیره مجاز است';
+                      break;
+                  case 'duplicate_id':
+                      errorMessage = 'آیدی تکراری! لطفاً آیدی دیگری انتخاب کنید';
+                      break;
+              }
+              
+              if (errorMessage) {
+                  const errorDiv = document.createElement('div');
+                  errorDiv.style.cssText = 'background: #ffebee; color: #c62828; padding: 15px; border-radius: 10px; border-right: 4px solid #e74c3c; margin: 20px 45px; text-align: center; font-weight: bold;';
+                  errorDiv.innerHTML = `⚠️ ${errorMessage}`;
+                  
+                  const container = document.querySelector('.container');
+                  const header = document.querySelector('header');
+                  container.insertBefore(errorDiv, header.nextSibling);
+                  
+                  const newUrl = window.location.pathname;
+                  window.history.replaceState({}, document.title, newUrl);
+              }
+          }
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+          showErrorFromURL();
+          
+          document.getElementById('date').value = new Date().toISOString().split('T')[0];
+          
+          const idField = document.getElementById('id');
+          const imageField = document.getElementById('image');
+          if (idField.value && !imageField.value) {
+              imageField.value = `${idField.value}.jpg`;
+          }
+      });
+
+      document.getElementById('id').addEventListener('input', function(e) {
+          const id = e.target.value;
+          const imageField = document.getElementById('image');
+          const currentImage = imageField.value;
+          const isDefaultImage = !currentImage || currentImage.startsWith('');
+          if (id && isDefaultImage) {
+              imageField.value = `${id}.jpg`;
+          }
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jalaali-js@1.2.8/dist/jalaali.min.js"></script>
+  <script>
+      function setPersianDate() {
+          const today = new Date();
+          const jalaaliDate = jalaali.toJalaali(
+              today.getFullYear(), 
+              today.getMonth() + 1, 
+              today.getDate()
+          );
+          const year = jalaaliDate.jy;
+          const month = String(jalaaliDate.jm).padStart(2, '0');
+          const day = String(jalaaliDate.jd).padStart(2, '0');
+          document.getElementById('date').value = `${year}-${month}-${day}`;
+      }
+
+      document.getElementById('id').addEventListener('input', function(e) {
+          const id = e.target.value;
+          const imageField = document.getElementById('image');
+          const currentImage = imageField.value;
+          const isDefaultImage = !currentImage || currentImage.startsWith('');
+          if (id && isDefaultImage) {
+              imageField.value = `${id}.jpg`;
+          }
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+          setPersianDate();
+          const idField = document.getElementById('id');
+          const imageField = document.getElementById('image');
+          if (idField.value && !imageField.value) {
+              imageField.value = `${idField.value}.jpg`;
+          }
+      });
+  </script>
+</body>
+</html>

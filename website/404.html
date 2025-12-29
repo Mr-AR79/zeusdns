@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>404 - صفحه گم شد! | زئوس DNS</title>
+    <meta name="robots" content="noindex,follow">
+    <link rel="icon" href="/assets/logos/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/logos/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="/assets/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/logos/favicon-192x192.png" sizes="192x192" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/assets/logos/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="/assets/logos/favicon-512x512.png">
+    <link rel="preload" href="/assets/fonts/vazir.css" as="style">
+    <link rel="stylesheet" href="/assets/fonts/vazir.css">
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css">
+    <style>
+        .error-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 2.5rem;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            margin: 0;
+            color: var(--zeus-color);
+            text-shadow: 0 0 40px var(--zeus-glow);
+            font-weight: 900;
+        }
+
+        .error-text {
+            max-width: 560px;
+            line-height: 1.9;
+        }
+
+        .error-text p:first-child {
+            font-size: 1.5rem;
+            color: #e9e6c4;
+            margin: 0 0 0.5rem;
+        }
+
+        .error-text p:last-child {
+            font-size: 1.1rem;
+            color: #d4c779;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .error-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-home {
+            background: var(--zeus-color);
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.15rem;
+            text-decoration: none;
+            box-shadow: 0 0 30px var(--zeus-glow);
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 50px var(--zeus-glow);
+        }
+
+        .btn-support {
+            background: rgba(0, 162, 255, 0.15);
+            color: #00a2ff;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: 2px solid #00a2ff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-support:hover {
+            background: #00a2ff;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 7.5rem;
+            }
+
+            .error-text p:first-child {
+                font-size: 1.3rem;
+            }
+
+            .error-text p:last-child {
+                font-size: 0.9rem;
+            }
+
+            .error-wrapper {
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+
+            .error-buttons {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .btn-home,
+            .btn-support {
+                min-width: unset;
+                width: 85%;
+                max-width: 320px;
+                padding: 16px 16px;
+                font-size: 0.9rem !important;
+            }
+
+            .btn-home {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg"></canvas>
+    <div class="error-wrapper">
+        <h1 class="error-code">404</h1>
+        <div class="error-text">
+            <p>اوپس! این صفحه رو حتی زئوس هم پیدا نکرد</p>
+            <p>انگار یه اژدهای اینترنتی خورده باشتش!</p>
+        </div>
+        <div class="error-buttons">
+            <a href="/" class="btn-home">بازگشت به خانه</a>
+            <a href="https://t.me/ZeusDNS_Support" target="_blank" rel="noopener" class="btn-support">پشتیبانی 24/7</a>
+        </div>
+    </div>
+    <script defer src="/assets/js/main.js"></script>
+</body>
+
+</html>

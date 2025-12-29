@@ -1,0 +1,131 @@
+/* ===== FLOATING CONNECTION STATUS ===== */
+.connection-status {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  border: 1px solid var(--zeus-shadow);
+  border-radius: 30px;
+  padding: 3px 6px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 80vw;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-wrap: break-word;
+  backdrop-filter: blur(20px);
+}
+
+.connection-status:hover {
+  transform: translateY(-3px);
+}
+
+.status-icon{
+  margin-top: 4px;
+}
+.status-text {
+  font-size: 0.7rem;
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.waiting .status-icon,
+.waiting .status-text {
+  color: #007bff;
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.connected .status-icon,
+.connected .status-text {
+  color: #28a745;
+  text-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.pro-connected .status-icon,
+.pro-connected .status-text {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.disconnected .status-icon,
+.disconnected .status-text {
+  color: #dc3545;
+  text-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+.waiting.connection-status {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.15) 0%, rgba(0, 123, 255, 0.05) 100%);
+}
+
+.connected.connection-status {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.15) 0%, rgba(40, 167, 69, 0.05) 100%);
+}
+
+.pro-connected.connection-status {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%);
+}
+
+.disconnected.connection-status {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.15) 0%, rgba(220, 53, 69, 0.05) 100%);
+}
+
+body.light-mode .connection-status {
+  border: 1px solid var(--zeus-shadow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .waiting.connection-status {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.2) 0%, rgba(0, 123, 255, 0.1) 100%);
+}
+
+body.light-mode .connected.connection-status {
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.1) 100%);
+}
+
+body.light-mode .pro-connected.connection-status {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+}
+
+body.light-mode .disconnected.connection-status {
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.2) 0%, rgba(220, 53, 69, 0.1) 100%);
+}
+
+body.light-mode .status-text {
+  color: #333;
+  text-shadow: none;
+}
+
+body.light-mode .waiting .status-icon,
+body.light-mode .waiting .status-text {
+  color: #007bff;
+  text-shadow: none;
+}
+
+body.light-mode .connected .status-icon,
+body.light-mode .connected .status-text {
+  color: #28a745;
+  text-shadow: none;
+}
+
+body.light-mode .pro-connected .status-icon,
+body.light-mode .pro-connected .status-text {
+  color: #ffd700;
+  text-shadow: none;
+}
+
+body.light-mode .disconnected .status-icon,
+body.light-mode .disconnected .status-text {
+  color: #dc3545;
+  text-shadow: none;
+}
+
+@media screen and (width<=768px) {
+    .status-text{
+        display: none;
+    }
+}

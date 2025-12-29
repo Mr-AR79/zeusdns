@@ -1,0 +1,22 @@
+{
+  "name": "زئوس دی‌ان‌اس",
+  "short_name": "ZeusDNS",
+  "description": "DNS سریع، امن و ضد تحریم برای گیمرها",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/logos/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logos/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

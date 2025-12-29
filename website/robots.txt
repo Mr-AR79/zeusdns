@@ -1,0 +1,14 @@
+# robots.txt - ZeusDNS.ir
+User-agent: *
+Disallow: /admin/
+Disallow: /login
+Disallow: /new
+Disallow: /edit/
+Disallow: /logout
+
+Allow: /blog/
+Allow: /$
+Allow: /*.html
+
+# Sitemap
+Sitemap: https://zeusdns.ir/sitemap.xml

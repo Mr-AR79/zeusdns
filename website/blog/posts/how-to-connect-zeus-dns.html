@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف | Zeus DNS</title>
+  <meta name="description" id="meta-description" content="در این آموزش کامل و قدم‌به‌قدم یاد می‌گیرید چطور روی تمام دستگاه‌های رایج (اندروید، آیفون، ویندوز، مک، لینوکس، پلی‌استیشن، ایکس‌باکس، تلویزیون هوشمند، مودم و حتی سرور ویندوز) به DNS زئوس متصل بشید و تحریم‌ها رو دور بزنید. بدون نیاز به VPN و به صورت کاملاً رایگان!">
+  <meta name="keywords" id="meta-keywords" content="آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف, آموزشی, زئوس دی ان اس, DNS, زئوس, zeus dns, دور زدن تحریم, اتصال به dns, اندروید, آیفون, ویندوز, مک, لینوکس, ps5, xbox, مودم, تلویزیون هوشمند">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ZeusDNS.ir">
+  <meta name="theme-color" content="#1a1a1a">
+  <meta name="copyright" content="© 2025 ZeusDNS.ir">
+  <meta property="og:type" content="article">
+  <meta property="og:title" id="og-title" content="آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف">
+  <meta property="og:description" id="og-description" content="در این آموزش کامل و قدم‌به‌قدم یاد می‌گیرید چطور روی تمام دستگاه‌های رایج (اندروید، آیفون، ویندوز، مک، لینوکس، پلی‌استیشن، ایکس‌باکس، تلویزیون هوشمند، مودم و حتی سرور ویندوز) به DNS زئوس متصل بشید و تحریم‌ها رو دور بزنید. بدون نیاز به VPN و به صورت کاملاً رایگان!">
+  <meta property="og:url" id="og-url" content="https://zeusdns.ir/blog/posts/how-to-connect-zeus-dns">
+  <meta property="og:image" id="og-image" content="https://zeusdns.ir/blog/assets/pics/how-to-connect-zeus-dns.jpg">
+  <meta property="og:image:alt" id="og-image-alt" content="آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:site_name" content="زئوس دی‌ان‌اس">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twitter-title" content="آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف">
+  <meta name="twitter:description" id="twitter-description" content="در این آموزش کامل و قدم‌به‌قدم یاد می‌گیرید چطور روی تمام دستگاه‌های رایج (اندروید، آیفون، ویندوز، مک، لینوکس، پلی‌استیشن، ایکس‌باکس، تلویزیون هوشمند، مودم و حتی سرور ویندوز) به DNS زئوس متصل بشید و تحریم‌ها رو دور بزنید. بدون نیاز به VPN و به صورت کاملاً رایگان!">
+  <meta name="twitter:image" id="twitter-image" content="https://zeusdns.ir/blog/assets/pics/how-to-connect-zeus-dns.jpg">
+  <meta name="twitter:image:alt" id="twitter-image-alt" content="آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف">
+  <link rel="icon" href="/assets/logos/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/logos/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/assets/logos/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/logos/favicon-192x192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/logos/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/logos/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/assets/logos/favicon-512x512.png">
+  <meta name="msapplication-TileImage" content="/assets/logos/icon.png">
+  <meta name="msapplication-TileColor" content="#1a1a1a">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <link rel="preconnect" href="https://t.me">
+  <link rel="preconnect" href="https://site-assets.fontawesome.com">
+  <link rel="dns-prefetch" href="//t.me">
+  <link rel="canonical" id="canonical-link" href="https://zeusdns.ir/blog/posts/how-to-connect-zeus-dns">
+  <link rel="preload" href="/assets/fonts/vazir.css" as="style">
+  <link rel="stylesheet" href="/assets/fonts/vazir.css">
+  <link rel="preload" href="/assets/css/main.css" as="style">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preload" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css" as="style" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v7.1.0/css/all.css" crossorigin="anonymous">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" id="jsonld-article">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف",
+  "description": "در این آموزش کامل و قدم‌به‌قدم یاد می‌گیرید چطور روی تمام دستگاه‌های رایج (اندروید، آیفون، ویندوز، مک، لینوکس، پلی‌استیشن، ایکس‌باکس، تلویزیون هوشمند، مودم و حتی سرور ویندوز) به DNS زئوس متصل بشید و تحریم‌ها رو دور بزنید. بدون نیاز به VPN و به صورت کاملاً رایگان!",
+  "image": "https://zeusdns.ir/blog/assets/pics/how-to-connect-zeus-dns.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "ZeusDNS",
+    "url": "https://zeusdns.ir"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ZeusDNS",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zeusdns.ir/assets/logos/main-logo.png"
+    }
+  },
+  "datePublished": "1404-08-27",
+  "dateModified": "1404-08-27",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zeusdns.ir/blog/posts/how-to-connect-zeus-dns"
+  },
+  "articleSection": "آموزشی",
+  "keywords": "زئوس, zeus dns, دور زدن تحریم, اتصال به dns, اندروید, آیفون, ویندوز, مک, لینوکس, ps5, xbox, مودم, تلویزیون هوشمند"
+}</script>
+  <script type="application/ld+json" id="jsonld-breadcrumb">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "صفحه اصلی",
+      "item": "https://zeusdns.ir"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "بلاگ",
+      "item": "https://zeusdns.ir/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف",
+      "item": "https://zeusdns.ir/blog/posts/how-to-connect-zeus-dns"
+    }
+  ]
+}</script>
+</head>
+
+<body>
+  <!-- Back to Top -->
+  <button id="backtotop" aria-label="بازگشت به بالا" title="بازگشت به بالا">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <!-- Background Canvas -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div id="menu-overlay" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="main-header">
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+      <a href="/"><i class="fa-regular fa-home"></i> صفحه اصلی</a>
+      <a href="/#public-dns"><i class="fa-regular fa-satellite-dish"></i> دی‌ان‌اس ها</a>
+      <a href="/#setup"><i class="fa-regular fa-user-gear"></i> نحوه اتصال</a>
+      <a href="/#order"><i class="fa-regular fa-cart-shopping"></i> خرید دی‌ان‌اس اختصاصی</a>
+      <a href="/status" class="active"><i class="fa-solid fa-heart-pulse"></i> وضعیت سرویس</a>
+      <a href="/#contact-form"><i class="fa-regular fa-envelope"></i> تماس با ما</a>
+      <div class="theme-toggle" id="themeToggle"><i class="fas fa-sun"></i></div>
+    </nav>
+    <div class="logo"><img src="/assets/logos/main-logo.png" alt="ZeusDNS-Logo"></div>
+  </header>
+
+  <!-- POST PAGE -->
+  <section class="post-page">
+    <div class="post-container">
+      <aside class="post-sidebar">
+        <div class="current-post-wrapper">
+          <div class="sidebar-card" id="current-post-card">
+            <img src="/blog/assets/pics/placeholder.jpg" alt="" id="current-img">
+            <div class="sidebar-card-content">
+              <h4 class="sidebar-card-title" id="current-title"></h4>
+              <p class="sidebar-card-meta" id="current-meta"></p>
+              <p class="sidebar-card-summary" id="current-summary"></p>
+            </div>
+          </div>
+        </div>
+        <div class="latest-posts-wrapper">
+          <h3 class="sidebar-title">جدیدترین مطالب</h3>
+          <div id="latest-posts"></div>
+        </div>
+      </aside>
+      <article class="post-main">
+        <h1 id="title">آموزش کامل نحوه اتصال به DNS در دستگاه های مختلف</h1>
+        <p class="post-meta" id="meta">دسته: <strong>آموزشی</strong> — تاریخ: <strong>1404-08-27</strong></p>
+        <div class="post-content" id="content">
+              <ul class="tab-menu">
+        <li class="active"><a href="#android" onclick="openTab(event, 'android')"><i class="fab fa-android"></i> اندروید</a></li>
+        <li><a href="#windows" onclick="openTab(event, 'windows')"><i class="fab fa-windows"></i> ویندوز</a></li>
+        <li><a href="#ios" onclick="openTab(event, 'ios')"><i class="fab fa-apple"></i> IOS</a></li>
+        <li><a href="#macos" onclick="openTab(event, 'macos')"><i class="fab fa-apple"></i> macOS</a></li>
+        <li><a href="#linux" onclick="openTab(event, 'linux')"><i class="fab fa-linux"></i> لینوکس</a></li>
+        <li><a href="#tv" onclick="openTab(event, 'tv')"><i class="fas fa-tv"></i> تلویزیون</a></li>
+        <li><a href="#ps" onclick="openTab(event, 'ps')"><i class="fab fa-playstation"></i> PS4/PS5</a></li>
+        <li><a href="#xbox" onclick="openTab(event, 'xbox')"><i class="fab fa-xbox"></i> Xbox</a></li>
+        <li><a href="#windows-server" onclick="openTab(event, 'windows-server')"><i class="fas fa-server"></i> سرور ویندوز</a></li>
+        <li><a href="#modem" onclick="openTab(event, 'modem')"><i class="fas fa-wifi"></i> مودم و روتر</a></li>
+        <li><a href="#td-lte" onclick="openTab(event, 'td-lte')"><i class="fas fa-broadcast-tower"></i> مودم TD-LTE</a></li>
+    </ul>
+
+<div id="android" class="tab-content active">
+    <h2>اندروید</h2>
+    <h3>اتصال از طریق اپلیکیشن زئوس:</h3>
+    <ol>
+        <li>نرم افزار اختصاصی زئوس برای اندروید را <a href="https://zeusdns.ir/download/android/ZeusDns-Changer-v1.0.1.apk">به صورت مستقیم</a> دریافت و نصب نمایید.</li>
+        <li>نرم افزار را اجرا کرده و اجازه دسترسی ها رو بدهید.</li>
+        <li>دکمه اتصال را بفشارید.</li>
+
+    </ol>
+    <h3>اتصال از طریق تنظیمات دستی:</h3>
+    <h4>در اندروید ۹ و بالاتر</h4>
+    <ol>
+        <li>وارد تنظیمات شوید.</li>
+        <li>به مسیر Network & Internet > Advanced > Private DNS بروید.</li>
+        <li>گزینه Private DNS provider hostname را انتخاب کنید.</li>
+        <li>عبارت زیر را وارد کنید:<br>free.zeusdns.ir</li>
+        <li>روی Save بزنید.</li>
+    </ol>
+
+    <h4>در اندروید پایین تر از ۹ و در صورت اتصال به Wi-Fi</h4>
+    <ol>
+        <li>وارد تنظیمات گوشی شوید (Settings).</li>
+        <li>بخش اتصالات یا Network & Internet را باز کنید.</li>
+        <li>وارد قسمت Wi-Fi شوید و شبکه متصل را انتخاب کنید.</li>
+        <li>گزینه‌ی Modify Network یا Advanced را انتخاب کنید.</li>
+        <li>در قسمت IP settings، حالت را به Static تغییر دهید.</li>
+        <li>در بخش DNS مقادیر زیر را وارد کنید:
+            <ul>
+                <li>DNS 1: 37.32.5.60</li>
+                <li>DNS 2: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تغییرات را ذخیره کنید.</li>
+    </ol>
+    <p><strong>توجه:</strong> این تنظیم فقط برای همان شبکه Wi-Fi اعمال می‌شود. در صورت تغییر شبکه، باید تنظیمات را مجدد انجام دهید.</p>
+</div>
+
+<div id="windows" class="tab-content">
+    <h2>ویندوز</h2>
+    <h3>اتصال از طریق تنظیمات دستی:</h3>
+    <ol>
+        <li>وارد Control Panel شوید.</li>
+        <li>به مسیر زیر بروید:<br>Network and Internet > Network and Sharing Center > Change adapter settings</li>
+        <li>روی شبکه (Wi-Fi یا Ethernet) که به آن متصل هستید راست‌کلیک کرده و گزینه Properties را انتخاب کنید.</li>
+        <li>گزینه Internet Protocol Version 4 (TCP/IPv4) را انتخاب کرده و روی Properties بزنید.<br>گزینه Use the following DNS server addresses را فعال کنید.</li>
+        <li>مقادیر زیر را وارد کنید:
+            <ul>
+                <li>Preferred DNS server: 37.32.5.60</li>
+                <li>Alternate DNS server: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>روی OK بزنید و تمام پنجره‌ها را ببندید.</li>
+        <li>در صورت لزوم مرورگر خود را یکبار بسته و مجدد باز کنید.</li>
+    </ol>
+    <img src="/blog/assets/pics/p2img01.jpg" alt="تنظیم DNS در ویندوز" loading="lazy" onerror="this.src='/blog/assets/pics/placeholder.jpg'">
+</div>
+
+<div id="ios" class="tab-content">
+    <h2>IOS</h2>
+    <h3>تنظیمات دستی در صورت اتصال به WiFi:</h3>
+    <ol>
+        <li>وارد Settings (تنظیمات) شوید.</li>
+        <li>وارد بخش Wi-Fi شوید.</li>
+        <li>روی آیکن کنار شبکه Wi-Fi متصل ضربه بزنید.</li>
+        <li>به پایین اسکرول کرده و روی Configure DNS بزنید.</li>
+        <li>گزینه Manual را انتخاب کنید.</li>
+        <li>در بخش DNS Servers، همه آدرس‌های موجود را حذف کنید و با کلیک روی Add Server آدرس‌های زیر را وارد کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>روی Save بزنید.</li>
+    </ol>
+    <p><strong>توجه:</strong> این تنظیم فقط برای همان شبکه Wi-Fi اعمال می‌شود. در صورت تغییر شبکه، باید تنظیمات را مجدد انجام دهید.</p>
+</div>
+
+<div id="macos" class="tab-content">
+    <h2>macOS</h2>
+    <ol>
+        <li>با کلیپ بر روی علامت سیب در بالا سمت چپ، وارد System Settings یا System Preferences شوید (بسته به نسخه macOS).</li>
+        <li>به قسمت Network بروید.</li>
+        <li>اتصال فعال خود (Wi-Fi یا Ethernet) را انتخاب کنید و روی Details یا Advanced کلیک کنید.</li>
+        <li>به تب DNS بروید.</li>
+        <li>آدرس‌های زیر را به لیست DNS servers اضافه کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>روی OK کلیک کرده و تغییرات را ذخیره کنید.</li>
+    </ol>
+    <img src="/blog/assets/pics/p2img02.jpg" alt="تنظیم DNS در macOS" loading="lazy" onerror="this.src='/blog/assets/pics/placeholder.jpg'">
+</div>
+
+<div id="linux" class="tab-content">
+    <h2>لینوکس</h2>
+    <h3>لینوکس نسخه دسکتاپ:</h3>
+    <p>به صورت عمومی در لینوکس می‌توانید با ویرایش <span dir="ltr">/etc/resolv.conf</span> آی‌پی‌های زئوس را به عنوان سرورهای DNS تنظیم کنید. دقت کنید که در صورت وجود NetworkManager این تنظیمات ممکن است بازنویسی شوند.</p>
+    <p>در ادامه، تنظیمات مربوط به پراستفاده‌ترین توزیع لینوکس (اوبونتو) ارائه می‌شود:</p>
+    <ol>
+        <li>روی آیکن اپلیکیشن در منوبار سمت چپ کلیک کنید.</li>
+        <li>روی Settings کلیک کرده و سپس Network را انتخاب کنید.</li>
+        <li>کانکشن اینترنت خود را از فضای سمت راست انتخاب کنید و سپس روی آیکن چرخ‌دنده کلیک کنید.</li>
+        <li>روی برگه IPv4 کلیک کنید تا تنظیمات دی ان اس خودتان را ببینید.</li>
+        <li>دی ان اس را از حالت Automatic به Off تغییر دهید.</li>
+        <li>نشانی 37.32.5.60 و 37.32.5.61 را در بخش DNS وارد کنید.</li>
+        <img src="/blog/assets/pics/p2img03.jpg" alt="تنظیم DNS در لینوکس" loading="lazy" onerror="this.src='/blog/assets/pics/placeholder.jpg'">
+        <li>دکمه Apply را فشار دهید و یک بار کانکشن را قطع و وصل نمایید.</li>
+        <li>حال مرورگر خود را ری‌استارت کنید.</li>
+    </ol>
+
+    <h3>سایر نسخه‌های لینوکس:</h3>
+
+    <h4>Debian / Ubuntu (با systemd-resolved):</h4>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">sudo nano /etc/systemd/resolved.conf</span></p>
+    <p><span style="font-weight: 400;">در بخش </span><span style="font-weight: 400;">[Resolve]</span><span style="font-weight: 400;"> وارد کنید:</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">DNS=37.32.5.60 37.32.5.61</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">FallbackDNS=8.8.8.8</span></p>
+    <p><span style="font-weight: 400;">سپس:</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">sudo systemctl restart systemd-resolved</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf</span></p>
+
+    <h4>Fedora / RHEL / CentOS (با NetworkManager):</h4>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">nmcli con mod &lt;connection-name&gt; ipv4.dns “37.32.5.60 37.32.5.61”</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">nmcli con mod &lt;connection-name&gt; ipv4.ignore-auto-dns yes</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">nmcli con down &lt;connection-name&gt; &amp;&amp; nmcli con up &lt;connection-name&gt;</span></p>
+
+    <h4>Arch Linux (systemd-resolved یا resolvconf):</h4>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">sudo nano /etc/systemd/resolved.conf</span></p>
+    <p><span style="font-weight: 400;">یا در صورت استفاده از resolvconf:</span></p>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">echo -e “nameserver 37.32.5.60\nnameserver 37.32.5.61” | sudo tee /etc/resolv.conf</span></p>
+
+    <h4>Alpine Linux:</h4>
+    <p style="text-align: left; direction: ltr;"><span style="font-weight: 400;">echo -e “nameserver 37.32.5.60\nnameserver 37.32.5.61” | sudo tee /etc/resolv.conf</span></p>
+</div>
+
+<div id="tv" class="tab-content">
+    <h2>تلویزیون</h2>
+    <p>متاسفانه این روش فقط در برخی از تلویزیون‌ها قابل استفاده است. بنابراین، اگر تنظیمات را انجام داده‌اید اما مشکل همچنان برطرف نشده، متاسفانه این ویژگی برای شما قابل دسترسی نیست و در حال حاضر هیچ روش جایگزینی برای آن موجود نمی‌باشد.</p>
+    <ol>
+        <li>دکمه Settings روی ریموت کنترل را فشار دهید.</li>
+        <li>وارد بخش All Settings شوید.</li>
+        <li>به قسمت مربوط به تنظیمات شبکه اینترنت ( Network > Wi-Fi Connections) بروید.</li>
+        <li>شبکه Wi-Fi که به آن متصل هستید را انتخاب کنید و روی Edit کلیک کنید.</li>
+        <li>در قسمت DNS، تیک Set Automatically را بردارید و آدرس‌های زیر را وارد کنید و ذخیره کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تلویزیون را یکبار خاموش روشن کنید.</li>
+    </ol>
+    <p><strong>توجه:</strong> این تنظیم فقط برای همان شبکه Wi-Fi اعمال می‌شود. در صورت تغییر شبکه، باید تنظیمات را مجدد انجام دهید.</p>
+</div>
+
+<div id="ps" class="tab-content">
+    <h2>PS4/PS5</h2>
+    <h3>PS5:</h3>
+    <ol>
+        <li>از قسمت بالایی صفحه اصلی، وارد Settings شوید.</li>
+        <li>به Network بروید.</li>
+        <li>مجدد وارد Settings شوید.</li>
+        <li>گزینه Set Up Internet Connection را انتخاب کنید.</li>
+        <li>کانکشن Wi-Fi که به آن متصل هستید را انتخاب کنید و دکمه Options بر روی دسته کنسول را فشار دهید.</li>
+        <li>گزینه Advanced Settings را انتخاب کنید.</li>
+        <li>وارد قسمت DNS Settings بشوید و مقدار آن را بر روی Manual قرار دهید.</li>
+        <li>در بخش Primary و Secondary DNS، این مقادیر را وارد کنید:
+            <ul>
+                <li>Primary DNS: 37.32.5.60</li>
+                <li>Secondary DNS: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>چک کنید مقدار MTU Settings را بر روی Automatic تنظیم باشد.</li>
+        <li>جک کنید مقدار Proxy Server را بر روی Do Not Use تنظیم باشد.</li>
+        <li>در پایان، تنظیمات را ذخیره کنید.</li>
+    </ol>
+
+    <h3>PS4:</h3>
+    <ol>
+        <li>از منوی اصلی، وارد Settings شوید.</li>
+        <li>به Network بروید.</li>
+        <li>گزینه Set Up Internet Connection را انتخاب کنید.</li>
+        <li>نوع اتصال خود را انتخاب کنید:
+            <ul>
+                <li>Wi-Fi (Wireless)</li>
+                <li>LAN Cable (Wired)</li>
+            </ul>
+        </li>
+        <li>گزینه Custom را انتخاب کنید.</li>
+        <li>تنظیمات IP Address را روی Automatic بگذارید.</li>
+        <li>DHCP Host Name را روی Do Not Specify قرار دهید.</li>
+        <li>DNS Settings را روی Manual قرار دهید.</li>
+        <li>در بخش Primary و Secondary DNS، این مقادیر را وارد کنید:
+            <ul>
+                <li>Primary DNS: 37.32.5.60</li>
+                <li>Secondary DNS: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>مقدار MTU Settings را بر روی Automatic تنظیم کنید.</li>
+        <li>مقدار Proxy Server را بر روی Do Not Use تنظیم کنید.</li>
+        <li>در پایان، تنظیمات را ذخیره کنید.</li>
+    </ol>
+</div>
+
+<div id="xbox" class="tab-content">
+    <h2>Xbox</h2>
+    <ol>
+        <li>از منوی اصلی وارد Settings شوید.</li>
+        <li>به بخش General > Network settings بروید.</li>
+        <li>گزینه Advanced settings را انتخاب کنید.</li>
+        <li>روی DNS settings بزنید و گزینه Manual را انتخاب کنید.</li>
+        <li>آدرس زیر را وارد کنید:
+            <ul>
+                <li>Primary DNS: 37.32.5.60</li>
+                <li>سپس روی علامت فلش راست (علامت → پایین سمت راست صفحه کلید باز شده) و یا دکمه Options کلیک کنید و DNS دوم را وارد کنید</li>
+                <li>Secondary DNS: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>روی علامت > (بالا سمت چپ صفحه کلید باز شده) و یا دکمه LB کلیک کنید تا به عقب برگردید.</li>
+    </ol>
+    <p>اکنون کنسول شما از طریق زئوس به اینترنت متصل است.</p>
+</div>
+
+<div id="windows-server" class="tab-content">
+    <h2>سرور ویندوز</h2>
+    <h3>ویندوز سرور با GUI:</h3>
+    <ol>
+        <li>Control Panel → Network and Sharing Center</li>
+        <li>Change adapter settings</li>
+        <li>روی Ethernet راست‌کلیک کرده و وارد Properties شوید</li>
+        <li>Internet Protocol Version 4 (TCP/IPv4) → Properties</li>
+        <li>گزینه Use the following DNS server addresses را فعال کرده و بنویس:
+            <ul>
+                <li>Preferred: 37.32.5.60</li>
+                <li>Alternate: 37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تنظیمات را ذخیره کنید و صفحه را ببندید.</li>
+    </ol>
+
+    <h3>ویندوز سرور بدون GUI:</h3>
+    <ol>
+        <li>Get-NetAdapter</li>
+        <li> Set-DnsClientServerAddress -InterfaceAlias “Ethernet0” -ServerAddresses 37.32.5.60,37.32.5.61</li>
+    </ol>
+
+    <h3>ویندوز با نقش dns یا DNS Server Role</h3>
+    <ol>
+        <li>وارد Server Manager شوید.</li>
+        <li>به منوی بالا بروید و روی Tools > DNS کلیک کنید.</li>
+        <li>در کنسول DNS روی نام سرور در پنل چپ راست‌کلیک کنید و گزینه Properties را انتخاب کنید.</li>
+        <li>تب Forwarders را باز کنید و روی Edit کلیک کنید.</li>
+        <li>آدرس DNSهای زئوس را وارد کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تنظیمات را ذخیره کنید و صفحه را ببندید.</li>
+    </ol>
+</div>
+
+<div id="modem" class="tab-content">
+    <h2>مودم و روتر</h2>
+    <p>📌در ابتدا لازم است توجه کنید که تنظیم کردن DNS اختصاصی تنها در برخی از مودم‌ها و روترها امکان پذیر می‌باشد. برای اطلاعات بیشتر در مورد تنظیمات مخصوص به مودم خودتان، راهنمای تنظیم dns بر روی مدل مودم‌تان را در اینترنت جست و جو کنید.</p>
+    <ol>
+        <li>آدرس صفحه مدیریت مودم را در مرورگر وارد کنید (معمولا آدرس 192.168.1.1 و یا در برخی مدل ها 192.168.8.1</li>
+        <li>با وارد کردن نام کاربری و رمز عبور وارد شوید (معمولاً admin / admin).</li>
+        <li>بخش مرتبط با تنظیم کردن DNS را پیدا کنید. این تنظیم ممکن است در یکی از آدرس های زیر باشد:
+            <ul>
+                <li>در برخی دستگاه ها ذیل Network قسمت یا WAN</li>
+                <li>در برخی دستگاه در قسمت LAN یا DHCP Settings</li>
+                <li>برخی دستگاه ها زیر منوی Advance، قسمت DNS</li>
+                <li>📌در صورتی که تنظیمات DNS را پیدا نکردید، راهنمای تنظیم dns بر روی مدل مودم‌تان را در اینترنت جست و جو کنید.</li>
+            </ul>
+        </li>
+        <li>در بخش DNS، تنظیم DNS را از حالت اتومات خارج کرده و بر روی گزینه Use The Following DNS Servers کلیک کنید (و یا در برخی مدل ها، Use Custom DNS را فعال (Enable) کنید).</li>
+        <li>سپس DNSهای زئوس را وارد کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تنظیمات را ذخیره کنید و مودم را ری‌استارت کنید.</li>
+    </ol>
+</div>
+
+<div id="td-lte" class="tab-content">
+    <h2>مودم TD-LTE</h2>
+    <p>در ابتدا لازم است توجه کنید که تنظیم کردن DNS اختصاصی تنها در برخی از مودم‌ها امکان پذیر می‌باشد. برای اطلاعات بیشتر در مورد تنظیمات مخصوص به مودم خودتان، راهنمای تنظیم DNS بر روی مدل مودم‌تان را در اینترنت جست و جو کنید.</p>
+    <ol>
+        <li>آدرس صفحه مدیریت مودم را در مرورگر وارد کنید (معمولا آدرس 192.168.1.1 و یا در برخی مدل ها 192.168.8.1).</li>
+        <li>با وارد کردن نام کاربری و رمز عبور وارد شوید (معمولاً admin / admin).</li>
+        <li>وارد قسمت DHCP Settings شوید (این آیتم معمولا ذیل منو Network می‌باشد).</li>
+        <li>در بخش DNS، گزینه Manual DNS و یا Use Custom DNS را فعال (Enable) کرده و DNSهای زئوس را وارد کنید:
+            <ul>
+                <li>37.32.5.60</li>
+                <li>37.32.5.61</li>
+            </ul>
+        </li>
+        <li>تنظیمات را ذخیره کنید و مودم را ری‌استارت کنید.</li>
+    </ol>
+</div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-menu")[0].getElementsByTagName("li");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.parentElement.classList.add("active");
+            evt.preventDefault();
+        }
+    </script>
+        </div>
+        <div class="share-section">
+          <div class="share-buttons">
+            <a href="#" class="share-btn telegram" id="share-telegram"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="share-btn twitter" id="share-twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="share-btn linkedin" id="share-linkedin"><i class="fab fa-linkedin"></i></a>
+            <button class="share-btn copy" id="share-copy"><i class="fal fa-link"></i></button>
+          </div>
+          <p id="copy-feedback" style="margin-top:10px; color:#ccc; font-size:0.9rem;"></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <section class="footer-col">
+        <h3><i class="fa-light fa-shield-halved"></i> سیاست حفظ حریم خصوصی</h3>
+        <ul class="footer-list">
+          <li>هیچ‌کدام از درخواست‌های DNS شما (Queries) ثبت یا ذخیره نمی‌شود.</li>
+          <li>آدرس IP، زمان اتصال یا محتوای ترافیک شما تحلیل نمی‌شود.</li>
+          <li>ما از پروتکل‌های رمزنگاری‌شده برای انتقال DNS استفاده می‌کنیم.</li>
+          <li>اطلاعات شخصی شما (در صورت تماس) فقط برای پشتیبانی استفاده می‌شود و حذف می‌گردد.</li>
+          <li>ما با هیچ نهاد یا شرکتی اطلاعات کاربران را به اشتراک نمی‌گذاریم.</li>
+        </ul>
+        <p class="small-note">حریم خصوصی شما، اولویت اول ماست. بدون لاگ، بدون ردیابی.</p>
+      </section>
+      <section class="footer-col">
+        <h3><i class="fa-light fa-bolt-lightning"></i> درباره زئوس DNS</h3>
+        <p>
+          زئوس توسط تیمی از <strong>گیمرها، توسعه‌دهندگان و متخصصان شبکه ایرانی</strong> ساخته شده که از پینگ بالا،
+          تحریم‌های ناعادلانه و محدودیت‌های اینترنتی خسته شده بودند.
+        </p>
+        <p>
+          ما باور داریم اینترنت باید <strong>آزاد، سریع و امن</strong> باشد — بدون نیاز به ابزارهای پیچیده.
+          زئوس با یک تغییر ساده DNS، تجربه گیمینگ و وب‌گردی شما را متحول می‌کند.
+        </p>
+        <p class="small-note">ساخته‌شده با عشق در ایران، برای همه کاربران ایرانی.</p>
+      </section>
+      <section class="footer-col">
+        <h3><i class="fa-light fa-circle-question"></i> سوالات متداول</h3>
+        <div class="faq">
+          <details open>
+            <summary>آیا زئوس DNS کاملاً رایگان است؟</summary>
+            <div class="content">
+              <p>بله! DNS عمومی زئوس کاملاً رایگان است. اما برای تجربه حرفه‌ای‌تر، DNS Pro با توکن اختصاصی و پشتیبانی
+                ویژه ارائه می‌شود.</p>
+            </div>
+          </details>
+          <details>
+            <summary>آیا زئوس جایگزین VPN می‌شود؟</summary>
+            <div class="content">
+              <p>زئوس تحریم‌ها را دور می‌زند و پینگ را کاهش می‌دهد، اما ترافیک را رمزنگاری نمی‌کند. برای امنیت کامل، از
+                VPN + زئوس استفاده کنید.</p>
+            </div>
+          </details>
+          <details>
+            <summary>آیا دسترسی به سایت‌های داخلی مختل می‌شود؟</summary>
+            <div class="content">
+              <p>خیر! زئوس به‌طور هوشمند فقط سرویس‌های تحریمی را مسیریابی می‌کند و دسترسی به بانک‌ها، سایت‌های دولتی و
+                داخلی کاملاً پایدار است.</p>
+            </div>
+          </details>
+          <details>
+            <summary>چطور DNS Pro بگیرم؟</summary>
+            <div class="content">
+              <p>از طریق <a href="https://t.me/ZeusDNS_Support" target="_blank" rel="noopener">تلگرام پشتیبانی</a> توکن
+                اختصاصی دریافت کنید. پشتیبانی 24/7.</p>
+            </div>
+          </details>
+          <details>
+            <summary>آیا زئوس برای کنسول (PS5/Xbox) کار می‌کند؟</summary>
+            <div class="content">
+              <p>بله! DNS عمومی یا Pro را در تنظیمات شبکه کنسول وارد کنید.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <a href="https://t.me/ZeusDNS_ir" target="_blank" rel="noopener" class="telegram-link"
+          aria-label="کانال تلگرام زئوس">
+          <i class="fab fa-telegram"></i> عضویت در کانال تلگرام
+        </a>
+        <a href="https://t.me/ZeusDNS_Support" target="_blank" rel="noopener" class="telegram-link"
+          aria-label="پشتیبانی تلگرام">
+          <i class="fas fa-headset"></i> پشتیبانی 24/7
+        </a>
+      </div>
+      <p class="footer-copy">
+        © 2025 <strong>ZeusDNS.ir</strong> | ساخته‌شده با <i class="fa-solid fa-bolt-lightning"></i> برای اینترنت آزاد و
+        گیمینگ بدون لگ
+        <br>
+        <small>تمام حقوق محفوظ است.</small>
+      </p>
+    </div>
+  </footer>
+  <div id="toast" role="alert" aria-live="assertive"></div>
+  <script defer src="/blog/assets/script.js"></script>
+  <script defer src="/assets/js/main.js"></script>
+</body>
+
+</html>
